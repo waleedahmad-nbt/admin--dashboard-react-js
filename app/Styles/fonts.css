@@ -1,0 +1,42 @@
+/* globals.css */
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/Fonts/MonaSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/Fonts/MonaSans-RegularItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/Fonts/MonaSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/Fonts/MonaSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/Fonts/MonaSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/Fonts/MonaSans-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}

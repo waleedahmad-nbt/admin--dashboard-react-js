@@ -2,20 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  @apply bg-neutral-800 font-sans text-neutral-100;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.SideBarShadow {
+  box-shadow: 0px 8px 28px 0px #0105114d;
+}
+
+.BtnGradient {
+  background: linear-gradient(128.49deg, #cb3cff 19.86%, #7f25fb 68.34%);
+}
+
+.Shadowmonth {
+  box-shadow: 1px 1px 1px 0px #10193466;
+}
+
+.simple-select.custom-select {
+  background-color: #7f25fb;
+  height: 34px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.simpleSelect-dropdown-bg.custom-select {
+  background-color: #7f25fb !important;
+}
+
+.simple-select-dropdown {
+  -webkit-overflow-scrolling: touch;
+  background-color: #0b1739 !important;
+  border: navajowhite !important;
+  box-shadow: 0px 8px 28px 0px #0105114d !important;
+}
+
+/* .schBtn {
+  border: 2px solid;
+  border-image-source: linear-gradient(
+    128.49deg,
+    #cb3cff 19.86%,
+    #7f25fb 68.34%
+  );
+} */
+
+.schBtn {
+  border-image-source: linear-gradient(
+    128.49deg,
+    #cb3cff 19.86%,
+    #7f25fb 68.34%
+  );
+  border-image-slice: 1;
+  border-radius: 10px;
+}
+
+.activedate {
+  box-shadow: 0px 4px 4px 0px #605bff40;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1739;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cb3cff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a834d1;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cb3cff #0b1739;
+}
+
+.bg-dark-800 {
+  background-color: #1a1a2e;
+}
+.bg-dark-700 {
+  background-color: #16213e;
+}
+.bg-dark-600 {
+  background-color: #0f3460;
+}
+.stroke-dark-500 {
+  stroke: #0a1a33;
+}
+
+/* Custom animation */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
   }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.pulse {
+  animation: pulse 2s infinite;
 }
