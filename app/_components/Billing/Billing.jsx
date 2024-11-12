@@ -47,7 +47,7 @@ const Billing = () => {
           Lorem ipsum dolor sit amet consectetur adipiscing.
         </p>
 
-        <div className="mt-6 rounded-xl border border-darkGray bg-neutral-600 p-7">
+        <div className="mt-6 rounded-xl border border-darkGray bg-neutral-600 p-3 md:p-5 lg:p-7">
           {/* Payment Method */}
           <div>
             {paymentMethods.map((method, index) => (
@@ -95,7 +95,7 @@ const Billing = () => {
             </p>
             <form className="mt-9">
               {/* Full Name Field */}
-              <div className="mb-6 flex justify-between border-b border-darkGray pb-6">
+              <div className="mb-6 flex flex-col justify-between border-b border-darkGray pb-6 lg:flex-row">
                 <label
                   className="mb-2 flex items-center whitespace-nowrap text-xs font-medium"
                   htmlFor="name"
@@ -111,7 +111,7 @@ const Billing = () => {
               </div>
 
               {/* Email Field */}
-              <div className="mb-6 flex justify-between border-b border-darkGray pb-6">
+              <div className="mb-6 flex flex-col justify-between border-b border-darkGray pb-6 lg:flex-row">
                 <label
                   className="mb-2 flex items-center whitespace-nowrap text-xs font-medium"
                   htmlFor="address"
@@ -125,7 +125,7 @@ const Billing = () => {
                   className="h-[42px] w-full max-w-[365px] rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none"
                 />
               </div>
-              <div className="mb-6 flex justify-between border-b border-darkGray pb-6">
+              <div className="mb-6 flex flex-col justify-between border-b border-darkGray pb-6 lg:flex-row">
                 <label
                   className="mb-2 flex items-center whitespace-nowrap text-xs font-medium"
                   htmlFor="location"
@@ -139,7 +139,7 @@ const Billing = () => {
                   className="h-[42px] w-full max-w-[365px] rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none"
                 />
               </div>
-              <div className="flex justify-between">
+              <div className="flex flex-col justify-between lg:flex-row">
                 <label
                   className="mb-2 flex items-center whitespace-nowrap text-xs font-medium"
                   htmlFor="website"

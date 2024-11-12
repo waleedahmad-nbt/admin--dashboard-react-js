@@ -7,8 +7,8 @@ import { IoIosNotifications } from "react-icons/io";
 
 const CredentialsSidebar = () => {
   return (
-    <div className="border-r border-darkGray">
-      <div className="mr-[52px] w-[250px]">
+    <div className="border-darkGray md:border-r">
+      <div className="mr-5 md:w-[250px] lg:mr-[52px]">
         <h3 className="text-base font-medium">Credentials</h3>
         <ul className="mt-6 space-y-2">
           <Navlink href="/add-users/personal-information">

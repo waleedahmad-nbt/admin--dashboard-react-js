@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
 const HalfDonutChart = () => {
-  const [series, setSeries] = useState([100, 90, 80]); // Example data percentages
+  const [series, setSeries] = useState([100, 90, 80]);
   const [options, setOptions] = useState({
     chart: {
       height: 250,
@@ -40,13 +40,13 @@ const HalfDonutChart = () => {
   });
   return (
     <>
-      <div className="h-[460px] w-full rounded-lg bg-neutral-600 p-6 text-white">
+      <div className="w-full rounded-lg bg-neutral-600 p-4 text-white lg:h-[460px] lg:p-6">
         <div className="mb-4 flex items-center justify-between">
           <div>
             <h3 className="text-base font-medium">Website Visitors</h3>
           </div>
           <div className="Shadowmonth flex cursor-pointer items-center justify-center gap-3 rounded bg-neutral-700 p-[9px]">
-            <p className="text-sm font-medium">Export </p>
+            <p className="text-xs font-medium">Export </p>
           </div>
         </div>
         <ReactApexChart

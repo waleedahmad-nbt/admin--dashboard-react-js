@@ -64,7 +64,7 @@ const WebsiteVisitors = () => {
   const series = deviceData.map((device) => device.count);
   return (
     <>
-      <div className="h-full w-full rounded-xl bg-neutral-600 p-[30px] text-white shadow-md">
+      <div className="h-full w-full rounded-xl bg-neutral-600 p-2 text-white shadow-md md:p-4 lg:p-[30px]">
         <h2 className="mb-7 text-start text-base font-medium">
           Website Visitors
         </h2>

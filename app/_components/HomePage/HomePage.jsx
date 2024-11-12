@@ -10,6 +10,9 @@ import ArrowExternal from "../Icons/ArrowExternal";
 
 import dynamic from "next/dynamic";
 
+const WorldMap = dynamic(() => import("../WorldMap/WorldMap"), {
+  ssr: false,
+});
 const ProfitChart = dynamic(() => import("../Charts/ProfitChart/ProfitChart"), {
   ssr: false,
 });
@@ -32,8 +35,8 @@ const RecentOrder = dynamic(() => import("../RecentOrder/RecentOrder"), {
 const HomePage = () => {
   return (
     <>
-      <div className="mb-28 px-11">
-        <div className="flex items-center justify-between">
+      <div className="mb-28 px-4 lg:px-11">
+        <div className="flex flex-col justify-between gap-y-4 md:flex-row md:items-center">
           <div>
             <h2 className="text-2xl font-semibold">Welcome back, John</h2>
             <p className="mt-1 text-xs font-normal italic text-neutral-400">
@@ -51,7 +54,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="mt-8 flex items-center gap-4">
+        <div className="mt-8 flex w-full items-center gap-4 overflow-x-auto">
           <div className="w-full rounded-lg border border-darkGray bg-neutral-600 p-5">
             <div className="flex w-full items-center justify-between">
               <div className="flex items-center gap-1">
@@ -133,7 +136,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="mt-[17px] grid grid-cols-[64.6%_35.4%] rounded-xl border border-darkGray">
+        <div className="mt-[17px] grid grid-cols-1 rounded-xl border border-darkGray md:grid-cols-[64.6%_35.4%]">
           <div className="h-full">
             <RevenueExpensesChart />
           </div>
@@ -143,7 +146,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="mt-10 flex items-center justify-between">
+        <div className="mt-10 flex flex-col justify-between gap-y-4 md:flex-row md:items-center">
           <div>
             <h2 className="text-2xl font-semibold">Reports overview</h2>
             <div>Select date</div>
@@ -159,7 +162,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="mt-6 grid h-full grid-cols-2 gap-5">
+        <div className="mt-6 grid h-full grid-cols-1 gap-5 md:grid-cols-2">
           <div>
             <DeviceUsersChart />
           </div>
@@ -167,7 +170,7 @@ const HomePage = () => {
             <RecentOrder />
           </div>
         </div>
-        {/* <UsersbyCountry /> */}
+        <WorldMap />
       </div>
     </>
   );

@@ -16,7 +16,7 @@ const Sidelink = ({ href, children }) => {
       <li className={liClasses}>
         {/* Left active line */}
         <p
-          className={`h-[42px] w-1 rounded-l ${isActive ? "bg-primary-1" : "bg-transparent"}`}
+          className={`h-[42px] w-1 rounded-l hover:text-white ${isActive ? "bg-primary-1" : "bg-transparent"}`}
         ></p>
 
         {/* Link */}

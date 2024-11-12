@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { FaMobile } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import { PiDeviceMobileCamera } from "react-icons/pi";
 
 const NotificationSettings = () => {
   const [notifications, setNotifications] = useState({

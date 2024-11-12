@@ -1,5 +1,5 @@
 import React from "react";
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import CalenderIcon from "../Icons/CalenderIcon";
 import Image from "next/image";
 import CompleteIcon from "../Icons/CompleteIcon";
@@ -77,7 +77,7 @@ const RecentOrder = () => {
   ];
   return (
     <>
-      <div className="rounded-xl bg-neutral-600 py-9">
+      <div className="rounded-xl bg-neutral-600 py-5">
         <div className="mb-4 flex items-center justify-between px-7">
           <div>
             <h3 className="text-base font-medium">Recent orders</h3>
@@ -92,7 +92,7 @@ const RecentOrder = () => {
         </div>
         <div className="relative overflow-x-auto">
           <table className="w-full table-fixed text-center">
-            <thead className="">
+            <thead>
               <tr>
                 <th scope="col" className="w-[140px] py-1 pb-3 pl-7">
                   <div className="flex items-center gap-1 whitespace-nowrap">
@@ -129,13 +129,13 @@ const RecentOrder = () => {
                   <td className="py-1 pl-7">
                     <div className="flex items-center gap-2">
                       <div className="flex items-center justify-center">
-                        <label className="relative flex cursor-pointer items-center">
+                        <label className="relative z-0 flex cursor-pointer items-center">
                           <input
                             type="checkbox"
                             className="peer size-[14px] cursor-pointer appearance-none rounded-sm border border-darkGray shadow transition-all checked:border-primary-1 checked:bg-primary-1 hover:shadow-md"
                             id={`check${user.id}`}
                           />
-                          <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-white opacity-0 peer-checked:opacity-100">
+                          <span className="absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 transform text-white opacity-0 peer-checked:opacity-100">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               className="h-3.5 w-3.5"

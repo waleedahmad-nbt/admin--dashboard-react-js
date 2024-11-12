@@ -22,7 +22,7 @@ const ChatInput = () => {
   return (
     <>
       <form onSubmit={handleSendMessage}>
-        <div className="sticky bottom-0 z-10 flex h-[60px] items-center space-x-2 rounded-b-xl bg-neutral-700 p-4">
+        <div className="flex h-[60px] items-center space-x-2 rounded-b-xl bg-neutral-700 p-4">
           <input
             type="text"
             placeholder="Type a message"

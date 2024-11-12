@@ -28,7 +28,7 @@ const Calendar = () => {
         />
       </header>
       <div className="mt-9 flex gap-7">
-        <div className="h-full flex-shrink-0">
+        <div className="hidden h-full flex-shrink-0 md:block">
           <Sidebar />
         </div>
         <div className="w-full">

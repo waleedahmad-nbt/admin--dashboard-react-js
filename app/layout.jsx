@@ -9,7 +9,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body
+        className={`antialiased`}
+        spellCheck="false"
+        cz-shortcut-listen="true"
+      >
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

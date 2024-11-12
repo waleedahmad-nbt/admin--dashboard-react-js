@@ -20,9 +20,9 @@ const ProfitChart = () => {
           data: [26, 36, 20, 60, 50, 49, 40, 40, 50, 39, 50, 49, 90],
         },
       ]);
-    }, 100); // Adjust delay as needed
+    }, 100);
 
-    return () => clearTimeout(timer); // Clean up the timer on component unmount
+    return () => clearTimeout(timer);
   }, []);
 
   const options = {
@@ -32,7 +32,7 @@ const ProfitChart = () => {
       animations: {
         enabled: true,
         easing: "easeinout",
-        speed: 800, // Duration of the animation in milliseconds
+        speed: 800,
         animateGradually: {
           enabled: true,
           delay: 150, // Delay between each bar animation
@@ -87,7 +87,7 @@ const ProfitChart = () => {
   };
 
   return (
-    <div className="rounded-t-lg bg-neutral-600 px-4 py-5 pb-5 text-white">
+    <div className="rounded-t-lg bg-neutral-600 p-5 text-white md:px-4">
       <div className="mb-4 flex flex-col">
         <div>
           <p className="flex items-center gap-1 text-sm font-medium text-neutral-400">
@@ -96,17 +96,22 @@ const ProfitChart = () => {
           </p>
           <div className="flex items-center gap-1.5">
             <h2 className="text-2xl font-semibold">$144.6K</h2>
-            <p className="border-success-light bg-success-light text-success flex h-[18px] items-center justify-center rounded-sm border px-1 py-0.5 text-[10px] font-medium">
+            <p className="flex h-[18px] items-center justify-center rounded-sm border border-success-light bg-success-light px-1 py-0.5 text-[10px] font-medium text-success">
               28.5%
               <ArrowIcon />
             </p>
           </div>
         </div>
-        <div className="h-[100px]">
-          <ReactApexChart options={options} series={series} type="bar" />
+        <div className="h-full">
+          <ReactApexChart
+            options={options}
+            series={series}
+            type="bar"
+            height={180}
+          />
         </div>
       </div>
-      <div className="mt-20 flex justify-between text-sm">
+      <div className="flex justify-between text-sm">
         <p className="text-xs font-normal text-neutral-400">Last 12 months</p>
         <p className="cursor-pointer text-start font-normal text-primary-1">
           View report

@@ -241,7 +241,7 @@ const ProductsList = () => {
                   >
                     <td className="w-full rounded-l-xl py-1">
                       <div className="flex items-center justify-center">
-                        <label className="relative flex cursor-pointer items-center">
+                        <label className="relative cursor-pointer items-center">
                           <input
                             type="checkbox"
                             className="peer size-[14px] cursor-pointer appearance-none rounded-sm border border-darkGray shadow transition-all checked:border-primary-1 checked:bg-primary-1 hover:shadow-md"

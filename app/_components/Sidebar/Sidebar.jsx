@@ -23,7 +23,7 @@ const menuItems = [
       { label: "All pages", link: "/dashboard/all-pages" },
       { label: "Reports", link: "/analytics" },
       { label: "Products", link: "/dashboard/products" },
-      { label: "Task", link: "/dashboard/reports" },
+      { label: "Analytics2", link: "/dashboard/reports" },
     ],
   },
   {
@@ -102,7 +102,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="SideBarShadow h-full w-[300px] py-[38px]">
+      <div className="SideBarShadow h-[900px] w-[300px] py-[38px]">
         <div className="flex items-center justify-between px-7">
           <Link href="/" className="flex cursor-pointer items-center gap-1.5">
             <Image

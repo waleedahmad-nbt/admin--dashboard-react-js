@@ -3,7 +3,6 @@ import CompleteIcon from "../Icons/CompleteIcon";
 import UserIcon from "../Icons/UserIcon";
 import { FaLocationDot, FaPhone, FaSquareCheck } from "react-icons/fa6";
 import { BsBagFill } from "react-icons/bs";
-import Image from "next/image";
 import { HiMiniPencil } from "react-icons/hi2";
 import { AiFillDelete } from "react-icons/ai";
 import { GoArrowDown } from "react-icons/go";
@@ -81,7 +80,7 @@ const OrderStatus = () => {
   return (
     <>
       <div className="mt-[30px] rounded-xl border border-darkGray bg-neutral-600">
-        <div className="flex items-center justify-between px-6 py-5">
+        <div className="flex flex-col justify-between space-y-2 px-4 py-5 md:flex-row md:items-center lg:px-6">
           <h2 className="text-base font-medium">Orders Status</h2>
           <div className="flex items-center gap-3">
             <button className="flex h-[30px] w-full items-center justify-center gap-1 whitespace-pre rounded bg-neutral-700 p-2 text-xs font-medium leading-[14px]">
@@ -152,7 +151,7 @@ const OrderStatus = () => {
                 >
                   <td className="w-full py-1">
                     <div className="flex w-full items-center justify-center">
-                      <label className="relative flex w-full cursor-pointer items-center justify-center">
+                      <label className="relative w-full cursor-pointer items-center justify-center">
                         <input
                           type="checkbox"
                           className="peer size-[14px] cursor-pointer appearance-none rounded-sm border border-darkGray shadow transition-all checked:border-primary-1 checked:bg-primary-1 hover:shadow-md"

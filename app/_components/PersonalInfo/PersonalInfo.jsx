@@ -60,10 +60,10 @@ const PersonalInfo = () => {
         <p className="text text-sm font-medium text-neutral-400">
           Lorem ipsum dolor sit amet consectetur adipiscing.
         </p>
-        <div className="mt-[26px] rounded-xl border border-darkGray bg-neutral-600 p-[34px]">
+        <div className="mt-[26px] rounded-xl border border-darkGray bg-neutral-600 p-3 md:p-5 lg:p-[34px]">
           <form>
             {/* Full Name Field */}
-            <div className="mb-6 flex justify-between border-b border-darkGray pb-6">
+            <div className="mb-6 flex flex-col justify-between border-b border-darkGray pb-6 lg:flex-row">
               <label
                 className="mb-2 flex items-center whitespace-nowrap text-xs font-medium"
                 htmlFor="name"
@@ -74,12 +74,12 @@ const PersonalInfo = () => {
                 type="text"
                 id="name"
                 placeholder="John Carter"
-                className="h-[42px] w-full max-w-[365px] rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none"
+                className="h-[42px] w-full rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none lg:max-w-[365px]"
               />
             </div>
 
             {/* Email Field */}
-            <div className="mb-6 flex justify-between border-b border-darkGray pb-6">
+            <div className="mb-6 flex flex-col justify-between border-b border-darkGray pb-6 lg:flex-row">
               <label
                 className="mb-2 flex items-center whitespace-nowrap text-xs font-medium"
                 htmlFor="email"
@@ -90,7 +90,7 @@ const PersonalInfo = () => {
                 type="email"
                 id="email"
                 placeholder="john@dashdark.com"
-                className="h-[42px] w-full max-w-[365px] rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none"
+                className="h-[42px] w-full rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none lg:max-w-[365px]"
               />
             </div>
 
@@ -177,7 +177,7 @@ const PersonalInfo = () => {
             </div>
 
             {/* Short Description Field */}
-            <div className="mt-6 flex justify-between">
+            <div className="mt-6 flex flex-col justify-between lg:flex-row">
               <label
                 className="mb-2 flex items-center whitespace-nowrap text-xs font-medium"
                 htmlFor="bio"
@@ -187,7 +187,7 @@ const PersonalInfo = () => {
               <textarea
                 id="bio"
                 placeholder="Write a short bio about you..."
-                className="h-24 w-full max-w-[365px] rounded border border-darkGray bg-transparent p-3 text-xs font-medium text-neutral-400 outline-none"
+                className="h-24 w-full rounded border border-darkGray bg-transparent p-3 text-xs font-medium text-neutral-400 outline-none lg:max-w-[365px]"
               />
             </div>
           </form>
@@ -198,10 +198,10 @@ const PersonalInfo = () => {
             Lorem ipsum dolor sit amet consectetur adipiscing.
           </p>
 
-          <div className="mt-[26px] rounded-xl border border-darkGray bg-neutral-600 p-[34px]">
+          <div className="mt-[26px] rounded-xl border border-darkGray bg-neutral-600 p-5 lg:p-[34px]">
             <form>
               {/* Full Name Field */}
-              <div className="mb-6 flex justify-between border-b border-darkGray pb-6">
+              <div className="mb-6 flex flex-col justify-between border-b border-darkGray pb-6 lg:flex-row">
                 <label
                   className="mb-2 flex items-center whitespace-nowrap text-xs font-medium"
                   htmlFor="number"
@@ -212,12 +212,12 @@ const PersonalInfo = () => {
                   type="text"
                   id="number"
                   placeholder="(123) 456 - 7890"
-                  className="h-[42px] w-full max-w-[365px] rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none"
+                  className="h-[42px] w-full rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none lg:max-w-[365px]"
                 />
               </div>
 
               {/* Email Field */}
-              <div className="mb-6 flex justify-between border-b border-darkGray pb-6">
+              <div className="mb-6 flex flex-col justify-between border-b border-darkGray pb-6 lg:flex-row">
                 <label
                   className="mb-2 flex items-center whitespace-nowrap text-xs font-medium"
                   htmlFor="position"
@@ -228,10 +228,10 @@ const PersonalInfo = () => {
                   type="text"
                   id="position"
                   placeholder="CEO & Founder"
-                  className="h-[42px] w-full max-w-[365px] rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none"
+                  className="h-[42px] w-full rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none lg:max-w-[365px]"
                 />
               </div>
-              <div className="mb-6 flex justify-between border-b border-darkGray pb-6">
+              <div className="mb-6 flex flex-col justify-between border-b border-darkGray pb-6 lg:flex-row">
                 <label
                   className="mb-2 flex items-center whitespace-nowrap text-xs font-medium"
                   htmlFor="location"
@@ -242,10 +242,10 @@ const PersonalInfo = () => {
                   type="text"
                   id="location"
                   placeholder="New York, NY"
-                  className="h-[42px] w-full max-w-[365px] rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none"
+                  className="h-[42px] w-full rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none lg:max-w-[365px]"
                 />
               </div>
-              <div className="flex justify-between">
+              <div className="flex flex-col justify-between lg:flex-row">
                 <label
                   className="mb-2 flex items-center whitespace-nowrap text-xs font-medium"
                   htmlFor="website"
@@ -256,7 +256,7 @@ const PersonalInfo = () => {
                   type="text"
                   id="website"
                   placeholder="dashdark.com"
-                  className="h-[42px] w-full max-w-[365px] rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none"
+                  className="h-[42px] w-full rounded border border-darkGray bg-transparent px-3 text-xs font-medium text-neutral-400 outline-none lg:max-w-[365px]"
                 />
               </div>
             </form>

@@ -99,8 +99,8 @@ const RevenueChart = () => {
 
   return (
     <>
-      <div className="h-[460px] rounded-lg bg-neutral-600 p-4 text-white">
-        <div className="mb-4 flex items-center">
+      <div className="rounded-lg bg-neutral-600 p-2 text-white md:p-4 lg:h-[460px]">
+        <div className="mb-4 flex flex-col gap-y-2 lg:flex-row lg:items-center">
           <div>
             <p className="whitespace-nowrap text-sm font-medium text-neutral-400">
               Revenue by customer type
@@ -113,7 +113,7 @@ const RevenueChart = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-6 whitespace-nowrap">
+          <div className="flex w-full items-center gap-6 overflow-x-auto whitespace-nowrap">
             <p className="flex cursor-pointer items-center space-x-1">
               <span className="h-2 w-2 rounded-full bg-primary-1"></span>
               <span className="text-xs font-medium text-neutral-400">
@@ -141,7 +141,9 @@ const RevenueChart = () => {
             </div>
           </div>
         </div>
-        <Chart options={options} series={series} type="bar" height={320} />
+        <div>
+          <Chart options={options} series={series} type="bar" height={320} />
+        </div>
       </div>
     </>
   );

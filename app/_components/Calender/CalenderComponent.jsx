@@ -46,7 +46,7 @@ const CalenderComponent = () => {
   };
 
   return (
-    <div className="grid grid-cols-3 rounded-md bg-neutral-600 text-white">
+    <div className="grid grid-cols-1 rounded-md bg-neutral-600 text-white md:grid-cols-2 lg:grid-cols-3">
       {months.map(({ month, days, monthStart, monthEnd }, index) => (
         <div key={index} className="border-b border-r border-darkGray p-5">
           <h3 className="mb-4 text-start text-sm font-normal">{month}</h3>

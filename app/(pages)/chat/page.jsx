@@ -6,9 +6,9 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="flex h-screen flex-col px-11">
+    <div className="mb-10 flex flex-col px-4 lg:px-11">
       {/* Top Navigation */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col justify-between gap-y-4 md:flex-row md:items-center">
         <div className="flex w-full items-center gap-12">
           <h2 className="text-xl font-semibold">Messages</h2>
           <div className="relative w-full max-w-[352px]">
@@ -30,19 +30,19 @@ const page = () => {
             </div>
           </div>
         </div>
-        <button className="flex h-[30px] items-center justify-center whitespace-nowrap rounded bg-primary-1 px-4 text-xs font-medium text-white">
+        <button className="flex h-[30px] max-w-[200px] items-center justify-center whitespace-nowrap rounded bg-primary-1 px-4 text-xs font-medium text-white">
           Write message
         </button>
       </div>
 
-      <div className="mt-11 flex flex-1 gap-[50px] overflow-hidden">
+      <div className="mt-11 flex w-full gap-4 lg:gap-[50px]">
         {/* Sidebar */}
-        <div className="w-[310px] overflow-y-auto">
+        <div className="hidden w-[310px] flex-shrink-0 overflow-x-auto overflow-y-auto md:block">
           <ChatSidebar />
         </div>
 
         {/* Main Chat Area */}
-        <div className="relative flex flex-1 flex-col rounded-xl bg-neutral-600">
+        <div className="flex w-full flex-col rounded-xl bg-neutral-600">
           <ChatWindow />
           <ChatInput />
         </div>

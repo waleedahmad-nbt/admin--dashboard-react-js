@@ -209,13 +209,13 @@ const AllUserTable = () => {
                 >
                   <td className="w-full rounded-l-xl py-1">
                     <div className="flex items-center justify-center">
-                      <label className="relative flex cursor-pointer items-center">
+                      <label className="relative cursor-pointer items-center">
                         <input
                           type="checkbox"
                           className="peer size-[14px] cursor-pointer appearance-none rounded-sm border border-darkGray shadow transition-all checked:border-primary-1 checked:bg-primary-1 hover:shadow-md"
                           id={`check${user.id}`}
                         />
-                        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-white opacity-0 peer-checked:opacity-100">
+                        <span className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform text-white opacity-0 peer-checked:opacity-100">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-3.5 w-3.5"
@@ -285,7 +285,7 @@ const AllUserTable = () => {
                   </td>
                   <td className="py-2.5">
                     <button
-                      className={`border-${user.online ? "success-light" : "neutral-400"} bg-${user.online ? "success-light" : "neutral-600"} text-success flex h-5 items-center justify-center rounded-sm border px-1.5 text-[10px] text-sm font-medium`}
+                      className={`border-${user.online ? "success-light" : "neutral-400"} bg-${user.online ? "success-light" : "neutral-600"} flex h-5 items-center justify-center rounded-sm border px-1.5 text-[10px] text-sm font-medium text-success`}
                     >
                       <span> . </span>
                       {user.online ? "online" : "offline"}
@@ -304,7 +304,7 @@ const AllUserTable = () => {
         </div>
       </div>
 
-      <div className="mt-5 flex items-center justify-between">
+      <div className="mt-5 flex flex-col justify-between md:flex-row md:items-center">
         <div>
           <p className="text-xs font-medium leading-5">1 - 10 of 460</p>
         </div>

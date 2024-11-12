@@ -168,7 +168,7 @@ const RevenueExpensesChart = () => {
           opacityFrom: 0.3,
           opacityTo: 0,
           stops: [0, 100],
-          colors: ["#00C1D4", "#00C1D4"], // Same color as the line for the background
+          colors: ["#00C1D4", "#00C1D4"],
         },
       },
     },
@@ -176,21 +176,21 @@ const RevenueExpensesChart = () => {
 
   return (
     <>
-      <div className="h-full rounded-l-xl border-r border-darkGray bg-neutral-600 px-8 pb-0 pt-6 text-white">
-        <div className="mb-4 flex items-center justify-between">
+      <div className="h-full rounded-l-xl border-r border-darkGray bg-neutral-600 px-5 pb-0 pt-6 text-white md:px-8">
+        <div className="mb-4 flex flex-col justify-between lg:flex-row lg:items-center">
           <div>
             <p className="text-sm font-medium text-neutral-400">
               Total revenue
             </p>
             <div className="mt-2 flex items-center gap-1.5">
               <h2 className="text-2xl font-semibold">$240.8K</h2>
-              <p className="border-success-light bg-success-light text-success flex h-[18px] items-center justify-center rounded-sm border px-1 py-0.5 text-[10px] font-medium">
+              <p className="flex h-[18px] items-center justify-center rounded-sm border border-success-light bg-success-light px-1 py-0.5 text-[10px] font-medium text-success">
                 28.4%
                 <ArrowIcon />
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 whitespace-nowrap">
             <span
               className={`flex cursor-pointer items-center space-x-1 ${
                 activeSeries.Revenue ? "" : "opacity-50"
@@ -208,7 +208,7 @@ const RevenueExpensesChart = () => {
               }`}
               onClick={() => toggleSeries("Expenses")}
             >
-              <span className="bg-cyanBlue h-2 w-2 rounded-full"></span>
+              <span className="h-2 w-2 rounded-full bg-cyanBlue"></span>
               <span className="text-xs font-medium text-neutral-400">
                 Expenses
               </span>
