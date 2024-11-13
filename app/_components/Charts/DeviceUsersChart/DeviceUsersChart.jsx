@@ -66,7 +66,7 @@ const DeviceUsersChart = () => {
 
   return (
     <>
-      <div className="flex h-full w-full flex-col items-center justify-center rounded-xl bg-neutral-600 p-6 text-white shadow-md">
+      <div className="flex h-full w-full flex-col items-center justify-center rounded-xl bg-neutral-600 p-4 text-white shadow-md md:p-6">
         <div className="relative mb-4 flex justify-center">
           <Chart options={options} series={series} type="donut" height="180" />
           <div className="absolute top-14 text-center">

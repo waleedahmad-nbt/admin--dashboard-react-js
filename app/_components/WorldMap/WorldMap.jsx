@@ -51,7 +51,7 @@ const usersByCountry = [
 
 const WorldMap = () => {
   return (
-    <div className="mt-6 flex flex-col space-x-8 rounded-lg bg-neutral-600 p-6 text-white md:flex-row">
+    <div className="mt-6 flex flex-col space-x-8 rounded-lg bg-neutral-600 p-4 text-white md:flex-row lg:p-6">
       {/* Sidebar */}
       <div className="md:w-1/3">
         <h2 className="text-base font-medium">Users by country</h2>
@@ -70,7 +70,7 @@ const WorldMap = () => {
               </p>
               <div className="flex items-center justify-between">
                 {/* Progress bar with dynamic width and color */}
-                <div className="relative h-1 w-[140px] rounded-md bg-transparent">
+                <div className="h-1 w-[140px] rounded-md bg-transparent">
                   <div
                     className={`h-full rounded-md ${country.color}`}
                     style={{ width: `${country.percentage}%` }}

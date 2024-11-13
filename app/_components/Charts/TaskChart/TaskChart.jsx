@@ -49,7 +49,7 @@ const TaskChart = () => {
 
   return (
     <>
-      <div className="mx-auto w-full rounded-lg bg-neutral-600 p-4 md:p-7">
+      <div className="mx-auto w-full rounded-lg bg-neutral-600 p-4 lg:p-6">
         <div className="flex items-center justify-between">
           <h2 className="inline-flex items-center gap-2 text-xs font-medium text-neutral-400">
             <span>
@@ -66,7 +66,7 @@ const TaskChart = () => {
           </div>
         </div>
         <div className="mb-2 flex items-center space-x-2">
-          <h1 className="text-4xl font-semibold text-white">257</h1>
+          <h1 className="text-2xl font-semibold text-white md:text-4xl">257</h1>
           <p className="flex h-[18px] items-center justify-center rounded-sm border border-success-light bg-success-light px-1 py-0.5 text-[10px] font-medium text-success">
             28.4%
             <ArrowIcon />

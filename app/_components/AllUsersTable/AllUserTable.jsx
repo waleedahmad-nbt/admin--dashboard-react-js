@@ -134,7 +134,7 @@ const AllUserTable = () => {
             <span className="text-neutral-400"> of 256 </span>
           </p>
         </div>
-        <div className="relative overflow-x-auto">
+        <div className="overflow-x-auto">
           <table className="w-full table-fixed text-center">
             <thead>
               <tr>

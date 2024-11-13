@@ -1,39 +1,43 @@
-import { configureStore } from "@reduxjs/toolkit";
 import { calendarReducer } from "@/app/redux/AllSlices/CalenderSlice";
 import { chatReducer } from "@/app/redux/AllSlices/chatSlice";
 import { kanbanReducer } from "./AllSlices/KanbanSLice";
-import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage"; // Default storage (localStorage in web)
+
+// store.js
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
 const persistConfig = {
-  key: "root", // Key for the persisted store
-  storage, // Use localStorage
-  whitelist: ["kanban"], // Only persist the `kanban` slice
+  key: "kanban",
+  storage,
+  whitelist: ["calendar", "chat", "kanban"],
 };
 
-const persistedKanbanReducer = persistReducer(persistConfig, kanbanReducer);
+const rootReducer = combineReducers({
+  calendar: calendarReducer,
+  chat: chatReducer,
+  kanban: kanbanReducer,
+});
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: {
-    calendar: calendarReducer,
-    chat: chatReducer,
-    kanban: persistedKanbanReducer, // Use the persisted reducer for kanban
-  },
+  reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        // Ignore actions and paths from redux-persist
-        ignoredActions: [
-          "persist/PERSIST",
-          "persist/REHYDRATE",
-          "persist/REGISTER",
-          "persist/FLUSH",
-          "persist/PAUSE",
-          "persist/PURGE",
-        ],
-        ignoredPaths: ["kanban._persist"], // Ignore redux-persist related paths
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
 });
 
-export const persistor = persistStore(store); // Create the persistor
+export const persistor = persistStore(store);

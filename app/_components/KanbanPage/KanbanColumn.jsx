@@ -4,13 +4,23 @@ import TaskItem from "./TaskItem";
 
 const KanbanColumn = ({
   title,
-  tasks,
+  tasks = [],
   onAddTask,
   onDeleteTask,
   onEditTask,
+  onDragOver,
+  onDrop,
+  isOver,
+  onDragStart,
 }) => {
   return (
-    <div className="w-full">
+    <div
+      onDragOver={(e) => {
+        e.preventDefault();
+        onDragOver();
+      }}
+      onDrop={() => onDrop()}
+    >
       <div className="mb-4 flex items-center gap-2">
         <h2 className="text-sm font-medium text-neutral-400">{title}</h2>
         <p className="flex size-4 items-center justify-center rounded-sm border border-[#575DFF80] text-xs text-gray-400">
@@ -23,13 +33,17 @@ const KanbanColumn = ({
       >
         <FaPlus />
       </button>
-      <div className="mt-5 space-y-4">
+      <div
+        className={`mt-5 space-y-4 rounded-md ${isOver ? "min-h-[1200px] border-2 border-dashed border-neutral-600 bg-neutral-600" : ""}`}
+      >
         {tasks.map((task) => (
           <TaskItem
             key={task.id}
             task={task}
+            section={title.toLowerCase().replace(" ", "")}
             onDeleteTask={onDeleteTask}
             onEditTask={onEditTask}
+            onDragStart={() => onDragStart(task)}
           />
         ))}
       </div>

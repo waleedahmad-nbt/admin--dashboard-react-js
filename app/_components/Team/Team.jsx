@@ -11,7 +11,7 @@ const Team = () => {
         Lorem ipsum dolor sit amet consectetur adipiscing.
       </p>
 
-      <div className="mt-[26px] rounded-xl border border-darkGray bg-neutral-600 p-3 md:p-5 lg:p-[34px]">
+      <div className="mb-20 mt-[26px] rounded-xl border border-darkGray bg-neutral-600 p-3 md:p-5 lg:p-[34px]">
         <form>
           {/* Full Name Field */}
           <div className="mb-6 flex flex-col justify-between border-b border-darkGray pb-6 lg:flex-row">

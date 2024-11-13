@@ -77,8 +77,8 @@ const RecentOrder = () => {
   ];
   return (
     <>
-      <div className="rounded-xl bg-neutral-600 py-5">
-        <div className="mb-4 flex items-center justify-between px-7">
+      <div className="rounded-xl bg-neutral-600 py-4 md:py-5">
+        <div className="mb-4 flex items-center justify-between px-4 md:px-7">
           <div>
             <h3 className="text-base font-medium">Recent orders</h3>
           </div>
@@ -90,7 +90,7 @@ const RecentOrder = () => {
             <MdKeyboardArrowDown />
           </div>
         </div>
-        <div className="relative overflow-x-auto">
+        <div className="overflow-x-auto">
           <table className="w-full table-fixed text-center">
             <thead>
               <tr>
@@ -124,7 +124,7 @@ const RecentOrder = () => {
               {usersData.map((user, index) => (
                 <tr
                   key={user.id}
-                  className={`w-full rounded-b-xl ${index % 2 === 0 ? "bg-neutral-700" : "bg-neutral-600"}`}
+                  className={`-z-20 w-full rounded-b-xl ${index % 2 === 0 ? "bg-neutral-700" : "bg-neutral-600"}`}
                 >
                   <td className="py-1 pl-7">
                     <div className="flex items-center gap-2">

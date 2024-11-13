@@ -99,7 +99,7 @@ const RevenueChart = () => {
 
   return (
     <>
-      <div className="rounded-lg bg-neutral-600 p-2 text-white md:p-4 lg:h-[460px]">
+      <div className="rounded-lg bg-neutral-600 p-4 text-white md:p-6 lg:h-[460px]">
         <div className="mb-4 flex flex-col gap-y-2 lg:flex-row lg:items-center">
           <div>
             <p className="whitespace-nowrap text-sm font-medium text-neutral-400">

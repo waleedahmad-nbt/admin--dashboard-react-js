@@ -44,18 +44,18 @@ const TaskModal = ({ onClose, onSave }) => {
             className="h-24 w-full rounded border border-darkGray bg-transparent p-3 text-xs font-medium text-neutral-400 outline-none lg:max-w-[365px]"
           />
         </div>
-        <div className="flex gap-3">
-          <button
-            onClick={handleSave}
-            className="flex h-[30px] items-center justify-center gap-1 whitespace-pre rounded bg-primary-1 p-2 text-xs font-medium leading-[14px]"
-          >
-            Save
-          </button>
+        <div className="flex items-center justify-end gap-3">
           <button
             onClick={onClose}
             className="flex h-[30px] items-center justify-center gap-1 whitespace-pre rounded bg-primary-1 p-2 text-xs font-medium leading-[14px]"
           >
             Cancel
+          </button>
+          <button
+            onClick={handleSave}
+            className="flex h-[30px] items-center justify-center gap-1 whitespace-pre rounded bg-primary-1 p-2 text-xs font-medium leading-[14px]"
+          >
+            Save
           </button>
         </div>
       </div>

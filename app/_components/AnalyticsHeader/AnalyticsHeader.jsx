@@ -24,7 +24,7 @@ const AnalyticsHeader = () => {
             </div>
           </div>
           <div className="mt-4 flex items-center gap-1.5">
-            <h2 className="text-xl font-semibold md:text-2xl">50.8K</h2>
+            <h2 className="text-xl font-semibold lg:text-2xl">50.8K</h2>
             <p className="flex h-[18px] items-center justify-center rounded-sm border border-success-light bg-success-light px-1 py-0.5 text-[10px] font-medium text-success">
               28.4%
               <ArrowIcon />
@@ -44,7 +44,7 @@ const AnalyticsHeader = () => {
             </div>
           </div>
           <div className="mt-4 flex items-center gap-1.5">
-            <h2 className="text-xl font-semibold md:text-2xl">23.6K</h2>
+            <h2 className="text-xl font-semibold lg:text-2xl">23.6K</h2>
             <p className="flex h-[18px] items-center justify-center rounded-sm border border-alert-light bg-alert-light px-1 py-0.5 text-[10px] font-medium text-alert">
               28.4%
               <ArrowExternal />
@@ -64,7 +64,7 @@ const AnalyticsHeader = () => {
             </div>
           </div>
           <div className="mt-4 flex items-center gap-1.5">
-            <h2 className="text-xl font-semibold md:text-2xl">50.8K</h2>
+            <h2 className="text-xl font-semibold lg:text-2xl">50.8K</h2>
             <p className="flex h-[18px] items-center justify-center rounded-sm border border-success-light bg-success-light px-1 py-0.5 text-[10px] font-medium text-success">
               28.4%
               <ArrowIcon />
@@ -84,7 +84,7 @@ const AnalyticsHeader = () => {
             </div>
           </div>
           <div className="mt-4 flex items-center gap-1.5">
-            <h2 className="text-xl font-semibold md:text-2xl">50.8K</h2>
+            <h2 className="text-xl font-semibold lg:text-2xl">50.8K</h2>
             <p className="flex h-[18px] items-center justify-center rounded-sm border border-success-light bg-success-light px-1 py-0.5 text-[10px] font-medium text-success">
               28.4%
               <ArrowIcon />

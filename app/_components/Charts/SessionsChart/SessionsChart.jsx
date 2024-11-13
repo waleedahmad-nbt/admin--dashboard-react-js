@@ -54,13 +54,13 @@ const SessionsChart = () => {
   ];
 
   return (
-    <div className="mt-5 rounded-b-lg border-t border-darkGray bg-neutral-600 p-4 pt-5 text-white">
+    <div className="mt-5 border-t border-darkGray bg-neutral-600 p-4 text-white max-md:rounded-b-xl md:rounded-br-xl">
       <div className="mb-4 flex flex-col justify-between">
         <div>
           <p className="text-sm font-medium text-neutral-400">Total sessions</p>
           <div className="flex items-center gap-1.5">
             <h2 className="text-2xl font-semibold">$144.6K</h2>
-            <p className="border-success-light bg-success-light text-success flex h-[18px] items-center justify-center rounded-sm border px-1 py-0.5 text-[10px] font-medium">
+            <p className="flex h-[18px] items-center justify-center rounded-sm border border-success-light bg-success-light px-1 py-0.5 text-[10px] font-medium text-success">
               28.5%
               <ArrowIcon />
             </p>

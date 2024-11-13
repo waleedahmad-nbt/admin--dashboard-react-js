@@ -4,56 +4,67 @@ import Link from "next/link";
 import React, { useState } from "react";
 import KanbanColumn from "./KanbanColumn";
 import TaskModal from "./TaskModal";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addTask,
+  deleteTask,
+  editTask,
+  moveTask,
+} from "@/app/redux/AllSlices/KanbanSLice";
 
 const KanbanPage = () => {
-  const [tasks, setTasks] = useState({
-    todo: [{ id: 1, title: "Task 1", description: "Task 1 description" }],
-    inProgress: [{ id: 2, title: "Task 2", description: "Task 2 description" }],
-    completed: [{ id: 3, title: "Task 3", description: "Task 3 description" }],
-  });
+  // Get tasks from Redux store
+  const tasks = useSelector((state) => state.kanban.tasks);
+  const dispatch = useDispatch();
+  const [draggedTask, setDraggedTask] = useState(null);
+  const [isOver, setIsOver] = useState(null);
 
   const [modalOpen, setModalOpen] = useState(false);
+  const [selectedSection, setSelectedSection] = useState("todo");
 
-  const addTaskToSection = (section) => {
-    const newTask = {
-      id: new Date().getTime(), // Generate a unique id based on timestamp
-      title: `New task in ${section}`,
-      description: `${section} task description`,
-    };
-
-    setTasks((prevTasks) => ({
-      ...prevTasks,
-      [section]: [...prevTasks[section], newTask],
-    }));
-  };
-
-  const deleteTaskFromSection = (section, taskId) => {
-    setTasks((prevTasks) => ({
-      ...prevTasks,
-      [section]: prevTasks[section].filter((task) => task.id !== taskId),
-    }));
-  };
-
-  const editTaskInSection = (section, taskId, updatedTask) => {
-    setTasks((prevTasks) => ({
-      ...prevTasks,
-      [section]: prevTasks[section].map((task) =>
-        task.id === taskId ? { ...task, ...updatedTask } : task,
-      ),
-    }));
-  };
-
-  const handleOpenModal = () => {
+  // Open the modal and set the selected section
+  const handleOpenModal = (section) => {
+    setSelectedSection(section); // Set the section dynamically
     setModalOpen(true);
   };
 
+  // Close the modal
   const handleCloseModal = () => {
     setModalOpen(false);
   };
 
+  // Save a new task
   const handleSaveTask = (newTask) => {
-    addTaskToSection("todo", newTask); // Add the task to the Todo section
-    handleCloseModal(); // Close the modal after saving the task
+    // Dispatch addTask action to add a task to the selected section
+    dispatch(addTask({ section: selectedSection, task: newTask }));
+    handleCloseModal();
+  };
+
+  // Delete a task
+  const handleDeleteTask = (taskId) => {
+    dispatch(deleteTask({ section: selectedSection, task: taskId }));
+  };
+
+  // Edit a task
+  const editTaskInSection = (section, taskId, updatedTask) => {
+    dispatch(editTask({ section, taskId, updatedTask }));
+  };
+
+  // Handle drag start
+  const handleDragStart = (task) => {
+    setDraggedTask(task);
+  };
+
+  const handleDragOver = (section) => {
+    setIsOver(section);
+  };
+
+  const handleDrop = (section) => {
+    if (draggedTask) {
+      dispatch(moveTask({ section, taskId: draggedTask.id, draggedTask }));
+      setDraggedTask(null);
+      setIsOver(null);
+    }
   };
 
   return (
@@ -89,27 +100,39 @@ const KanbanPage = () => {
           </Link>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 overflow-auto md:grid-cols-3 xl:gap-7">
+        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 xl:gap-7">
           <KanbanColumn
             title="Todo"
             tasks={tasks.todo}
-            onAddTask={handleOpenModal} // Open modal when adding a task
-            onDeleteTask={deleteTaskFromSection}
+            onAddTask={() => handleOpenModal("todo")}
+            onDeleteTask={handleDeleteTask}
             onEditTask={editTaskInSection}
+            onDragOver={() => handleDragOver("todo")}
+            onDrop={() => handleDrop("todo")}
+            isOver={isOver === "todo"}
+            onDragStart={handleDragStart}
           />
           <KanbanColumn
             title="In Progress"
             tasks={tasks.inProgress}
-            onAddTask={handleOpenModal} // Open modal when adding a task
-            onDeleteTask={deleteTaskFromSection}
+            onAddTask={() => handleOpenModal("inProgress")}
+            onDeleteTask={handleDeleteTask}
             onEditTask={editTaskInSection}
+            onDragOver={() => handleDragOver("inProgress")}
+            onDrop={() => handleDrop("inProgress")}
+            isOver={isOver === "inProgress"}
+            onDragStart={handleDragStart}
           />
           <KanbanColumn
             title="Completed"
             tasks={tasks.completed}
-            onAddTask={handleOpenModal} // Open modal when adding a task
-            onDeleteTask={deleteTaskFromSection}
+            onAddTask={() => handleOpenModal("completed")}
+            onDeleteTask={handleDeleteTask}
             onEditTask={editTaskInSection}
+            onDragOver={() => handleDragOver("completed")}
+            onDrop={() => handleDrop("completed")}
+            isOver={isOver === "completed"}
+            onDragStart={handleDragStart}
           />
         </div>
       </div>

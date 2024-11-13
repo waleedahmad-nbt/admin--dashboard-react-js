@@ -176,7 +176,7 @@ const RevenueExpensesChart = () => {
 
   return (
     <>
-      <div className="h-full rounded-l-xl border-r border-darkGray bg-neutral-600 px-5 pb-0 pt-6 text-white md:px-8">
+      <div className="charts z-[100] h-full border-r border-darkGray bg-neutral-600 p-4 text-white max-md:rounded-t-xl md:rounded-l-xl lg:p-6">
         <div className="mb-4 flex flex-col justify-between lg:flex-row lg:items-center">
           <div>
             <p className="text-sm font-medium text-neutral-400">
@@ -190,7 +190,7 @@ const RevenueExpensesChart = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-6 whitespace-nowrap">
+          <div className="flex flex-wrap items-center gap-6 gap-y-3 whitespace-nowrap max-md:mt-2">
             <span
               className={`flex cursor-pointer items-center space-x-1 ${
                 activeSeries.Revenue ? "" : "opacity-50"

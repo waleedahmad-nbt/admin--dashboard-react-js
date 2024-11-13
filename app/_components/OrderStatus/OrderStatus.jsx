@@ -80,7 +80,7 @@ const OrderStatus = () => {
   return (
     <>
       <div className="mt-[30px] rounded-xl border border-darkGray bg-neutral-600">
-        <div className="flex flex-col justify-between space-y-2 px-4 py-5 md:flex-row md:items-center lg:px-6">
+        <div className="flex flex-col justify-between space-y-2 p-4 md:flex-row md:items-center lg:p-6">
           <h2 className="text-base font-medium">Orders Status</h2>
           <div className="flex items-center gap-3">
             <button className="flex h-[30px] w-full items-center justify-center gap-1 whitespace-pre rounded bg-neutral-700 p-2 text-xs font-medium leading-[14px]">
@@ -92,8 +92,8 @@ const OrderStatus = () => {
             </button>
           </div>
         </div>
-        <div className="relative overflow-x-auto">
-          <table className="w-full table-fixed text-center">
+        <div className="overflow-x-auto rounded-xl">
+          <table className="w-full table-fixed">
             <thead>
               <tr>
                 <th scope="col" className="w-[100px] py-3">
@@ -149,32 +149,30 @@ const OrderStatus = () => {
                   key={user.id}
                   className={`w-full rounded-b-xl ${index % 2 === 0 ? "bg-neutral-700" : "bg-neutral-600"}`}
                 >
-                  <td className="w-full py-1">
-                    <div className="flex w-full items-center justify-center">
-                      <label className="relative w-full cursor-pointer items-center justify-center">
-                        <input
-                          type="checkbox"
-                          className="peer size-[14px] cursor-pointer appearance-none rounded-sm border border-darkGray shadow transition-all checked:border-primary-1 checked:bg-primary-1 hover:shadow-md"
-                          id={`check${user.id}`}
-                        />
-                        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-white opacity-0 peer-checked:opacity-100">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-3.5 w-3.5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            stroke="currentColor"
-                            strokeWidth="1"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                            ></path>
-                          </svg>
-                        </span>
-                      </label>
-                    </div>
+                  <td className="w-full px-[22px] py-1">
+                    <label className="cursor-pointer">
+                      <input
+                        type="checkbox"
+                        className="peer size-[14px] cursor-pointer appearance-none rounded-sm border border-darkGray shadow transition-all checked:border-primary-1 checked:bg-primary-1 hover:shadow-md"
+                        id={`check${user.id}`}
+                      />
+                      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-white opacity-0 peer-checked:opacity-100">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-3.5 w-3.5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          strokeWidth="1"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          ></path>
+                        </svg>
+                      </span>
+                    </label>
                   </td>
                   <td className="py-2.5">
                     <div className="flex items-center">

@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      zIndex: {
+        sidebar: "1000",
+        charts: "500",
+      },
       fontFamily: {
         sans: ["Mona Sans", "sans-serif"],
       },

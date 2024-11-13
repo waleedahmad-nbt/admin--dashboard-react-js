@@ -87,7 +87,7 @@ const ProfitChart = () => {
   };
 
   return (
-    <div className="rounded-t-lg bg-neutral-600 p-5 text-white md:px-4">
+    <div className="bg-neutral-600 p-4 text-white md:rounded-tr-xl">
       <div className="mb-4 flex flex-col">
         <div>
           <p className="flex items-center gap-1 text-sm font-medium text-neutral-400">

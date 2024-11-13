@@ -24,15 +24,25 @@ const kanbanSlice = createSlice({
     },
     deleteTask: (state, action) => {
       const { section, taskId } = action.payload;
-
-      if (state.tasks[section] && Array.isArray(state.tasks[section])) {
+      if (state.tasks[section]) {
         state.tasks[section] = state.tasks[section].filter(
           (task) => task.id !== taskId,
         );
       }
     },
+    moveTask: (state, action) => {
+      const { section, taskId, draggedTask } = action.payload;
+      // Remove the task from its original section
+      for (const key in state.tasks) {
+        state.tasks[key] = state.tasks[key].filter(
+          (task) => task.id !== taskId,
+        );
+      }
+      // Add the task to the new section
+      state.tasks[section].push(draggedTask);
+    },
   },
 });
 
-export const { addTask, editTask, deleteTask } = kanbanSlice.actions;
+export const { addTask, editTask, deleteTask, moveTask } = kanbanSlice.actions;
 export const kanbanReducer = kanbanSlice.reducer;
