@@ -11,7 +11,7 @@ export const menuItems = [
     label: "Dashboard",
     icon: <DashboardIcon />,
     subitems: [
-      { label: "All pages", link: "/dashboard/all-pages" },
+      // { label: "All pages", link: "/dashboard/all-pages" },
       { label: "Reports", link: "/analytics" },
       { label: "Products", link: "/dashboard/products" },
       { label: "Analytics2", link: "/dashboard/reports" },
@@ -21,12 +21,12 @@ export const menuItems = [
     label: "Features",
     icon: <StarIcon />,
     subitems: [
-      { label: "All pages", link: "/analytics" },
-      { label: "Contacts", link: "/dashboard/kanban" },
-      { label: "Companies", link: "/analytics" },
-      { label: "Tasks", link: "/analytics" },
+      // { label: "All pages", link: "/analytics" },
+      // { label: "Contacts", link: "/dashboard/kanban" },
+      // { label: "Companies", link: "/analytics" },
+      // { label: "Tasks", link: "/analytics" },
       { label: "Board", link: "/dashboard/kanban" },
-      { label: "Table", link: "/analytics" },
+      // { label: "Table", link: "/analytics" },
       { label: "Calendar", link: "/calender" },
       { label: "Chat", link: "/chat" },
     ],
@@ -42,12 +42,12 @@ export const menuItems = [
   {
     label: "Pricing",
     icon: <PricingIcon />,
-    subitems: [{ label: "Add Users", link: "/users/add-users" }],
+    subitems: [],
   },
   {
     label: "Integrations",
     icon: <IntegrationIcon />,
-    subitems: [{ label: "Item 1", link: "/dashboard/kanban" }],
+    subitems: [],
   },
 ];
 

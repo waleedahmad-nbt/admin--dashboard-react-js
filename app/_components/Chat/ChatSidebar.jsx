@@ -4,12 +4,13 @@ import Image from "next/image";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-const ChatSidebar = () => {
+const ChatSidebar = ({ toggleSidebar }) => {
   const contacts = useSelector((state) => state.chat.contacts);
   const selectedContactId = useSelector(
     (state) => state.chat.selectedContactId,
   );
   const dispatch = useDispatch();
+
   return (
     <>
       <div className="overflow-y-auto">
@@ -87,9 +88,12 @@ const ChatSidebar = () => {
                     ? "bg-neutral-600"
                     : "hover:bg-neutral-700"
                 }`}
-                onClick={() => dispatch(selectContact(contact.id))}
+                onClick={() => {
+                  dispatch(selectContact(contact.id)); // Select the contact
+                  toggleSidebar(); // Close the sidebar
+                }}
               >
-                <div className="flex justify-between">
+                <div onClick={toggleSidebar} className="flex justify-between">
                   <div className="flex items-center gap-2.5">
                     <Image
                       width={32}

@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="SideBarShadow w-[300px] py-[38px]">
+      <div className="h-full w-[300px] py-[38px]">
         <div className="flex items-center justify-between px-7">
           <Link href="/" className="flex cursor-pointer items-center gap-1.5">
             <Image

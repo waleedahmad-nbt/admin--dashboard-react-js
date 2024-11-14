@@ -66,7 +66,7 @@ const SidebarCalender = () => {
     for (let i = 0; i < 7; i++) {
       const day = format(addDays(startOfWeek(currentMonth), i), dateFormat);
       days.push(
-        <div className="text-center text-xs text-neutral-400" key={i}>
+        <div className="text-xs text-neutral-400" key={i}>
           {day}
         </div>,
       );
@@ -116,7 +116,7 @@ const SidebarCalender = () => {
   };
 
   return (
-    <div className="mx-auto max-w-xs rounded-lg border border-[#F1F4FA] bg-transparent p-3 text-gray-200 shadow-md">
+    <div className="mx-auto rounded-lg border border-[#F1F4FA] bg-transparent p-3 text-gray-200 shadow-md lg:max-w-xs">
       {renderHeader()}
       {renderDays()}
       {renderCells()}

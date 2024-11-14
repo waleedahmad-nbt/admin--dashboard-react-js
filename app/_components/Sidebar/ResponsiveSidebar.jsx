@@ -25,7 +25,7 @@ const ResponsiveSidebar = () => {
     <>
       {/* Menu Icon for smaller screens */}
       <div
-        className={`absolute left-0 top-1/2 z-[100] hidden h-full translate-y-1/2 transition-all duration-300 ease-in-out max-md:block ${
+        className={`absolute left-0 top-0 z-[100] hidden h-full transition-all duration-300 ease-in-out max-md:block ${
           isSidebarOpen ? "left-14" : "left-0"
         }`}
       >
@@ -38,8 +38,8 @@ const ResponsiveSidebar = () => {
       </div>
 
       <div
-        className={`SideBarShadow sidebar h-[900px] py-[38px] ${
-          isSidebarOpen ? "z-[1000] w-14 opacity-100" : "z-[0] w-0 opacity-0"
+        className={`SideBarShadow sidebar h-full py-[38px] ${
+          isSidebarOpen ? "w-14 opacity-100" : "w-0 max-md:opacity-0"
         } z-[1000] transition-all duration-300 max-md:fixed max-md:left-0 max-md:top-0 max-md:z-40 max-md:bg-neutral-700 md:block md:w-14`}
       >
         <div>

@@ -4,8 +4,9 @@ import ChatMessage from "./ChatMessage";
 import { FaPhone } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import Image from "next/image";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 
-const ChatWindow = () => {
+const ChatWindow = ({ toggleSidebar }) => {
   const selectedContactId = useSelector(
     (state) => state.chat.selectedContactId,
   );
@@ -21,10 +22,16 @@ const ChatWindow = () => {
 
   return (
     <>
-      <div className="flex h-full flex-col rounded-xl bg-neutral-600">
+      <div className="flex h-full flex-col rounded-t-xl bg-neutral-600">
         {/* Header */}
-        <div className="sticky top-0 z-10 flex items-center justify-between rounded-t-xl border-b border-darkGray bg-neutral-600 px-6 py-5">
+        <div className="top-0 flex items-center justify-between rounded-t-xl border-b border-darkGray bg-neutral-600 px-6 py-5">
           <div className="flex items-center gap-2.5">
+            <div
+              onClick={toggleSidebar}
+              className="hidden size-5 cursor-pointer items-center justify-center text-xl text-neutral-400 max-md:flex"
+            >
+              <IoChatbubbleEllipsesOutline />
+            </div>
             <div className="h-8 w-8 cursor-pointer">
               <Image
                 width={32}

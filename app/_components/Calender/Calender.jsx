@@ -27,8 +27,8 @@ const Calendar = () => {
           className="custom-select h-[42px] w-[159px] bg-[#7F25FB] text-white"
         />
       </header>
-      <div className="mt-9 flex gap-7">
-        <div className="hidden h-full flex-shrink-0 md:block">
+      <div className="mt-9 flex flex-col gap-3 lg:flex-row lg:gap-7">
+        <div className="h-full flex-shrink-0">
           <Sidebar />
         </div>
         <div className="w-full">
@@ -41,7 +41,7 @@ const Calendar = () => {
 
 export const Sidebar = () => (
   <>
-    <aside className="relative min-h-[1260px] w-[266px] rounded-md bg-neutral-600 p-6 text-white">
+    <aside className="rounded-md bg-neutral-600 p-4 text-white lg:relative lg:min-h-[1260px] lg:w-[266px] lg:p-6">
       <div className="flex h-full flex-col">
         {/* Top Section */}
         <div className="flex-grow">
@@ -125,7 +125,7 @@ export const Sidebar = () => (
         </div>
 
         {/* Bottom Section */}
-        <div className="absolute bottom-[30px] mx-auto min-w-[220px]">
+        <div className="mx-auto w-full max-lg:mt-10 lg:absolute lg:bottom-[30px] lg:min-w-[220px]">
           <button className="schBtn mx-auto w-full rounded-[10px] border-2 border-transparent bg-neutral-600 py-2 text-sm font-medium">
             <span className="bg-gradient-to-r from-[#cb3cff] to-[#7f25fb] bg-clip-text text-transparent">
               My Schedule

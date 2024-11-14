@@ -10,12 +10,12 @@ export default function MainLayout({ children }) {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <div className="flex">
-          <div className="sticky left-0 top-0 h-full">
-            <div className="hidden xl:block">
+        <div className="flex h-full">
+          <div className="sticky left-0 top-0 h-full min-h-[100vh]">
+            <div className="SideBarShadow hidden min-h-[100vh] overflow-y-auto xl:block">
               <Sidebar />
             </div>
-            <div className="block xl:hidden">
+            <div className="SideBarShadow block h-screen xl:hidden">
               <ResponsiveSidebar />
             </div>
           </div>
